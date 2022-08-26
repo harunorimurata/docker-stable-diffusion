@@ -8,7 +8,7 @@ RUN <<EOF
   apt update
   apt install -y wget git
 
-  wget -O miniconda.sh -nv https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh 
+  wget -O miniconda.sh -nv https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-$(uname -m).sh 
   bash miniconda.sh -b -p /opt/miniconda3
   echo export PATH="/opt/miniconda3/bin:$PATH" >> ~/.bashrc
   export PATH="/opt/miniconda3/bin:$PATH"
